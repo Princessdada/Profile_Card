@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script src="/script.js"></script>
+    <!-- <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .profile-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+        text-align: center;
+      }
+      .profile-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .profile-card h2 {
+        margin-top: 10px;
+        font-size: 24px;
+        color: #333;
+      }
+      .profile-card p {
+        color: #666;
+      }
+      .profile-card .social-links a {
+        margin: 0 5px;
+        text-decoration: none;
+        color: #555;
+      }
+      .profile-card .social-links a:hover {
+        color: #007bff;
+      }
+      #current-time {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="profile-card">
+      <!-- Profile Picture -->
+      <div class="profile-content">
+        <div class="profile-padding">
+          <img
+            src="/Image/F1DB6C01-E5A3-4576-929E-A9C92BD4AC68.jpg"
+            alt="Profile Picture"
+            data-testid="profilePicture" />
+        </div>
+        <!-- Full Name -->
+        <h2 data-testid="fullName">Princess Dada</h2>
+
+        <!-- Job Title -->
+        <p data-testid="jobTitle">Frontend Developer</p>
+
+        <!-- Short Bio -->
+        <p class="profile-padding text-size" data-testid="shortBio">
+          Versatile Front-End Developer with expertise in HTML, CSS, JavaScript,
+          and React, specializing in building responsive, user-friendly web
+          applications.
+        </p>
+        <!-- Email Address -->
+        <p class="email-box" data-testid="emailAddress">
+          <a href="mailto:princessdada321@gmail.com"
+            >Princessdada321@gmail.com</a
+          >
+        </p>
+        <!-- Social Links -->
+        <div class="social-links" data-testid="socialLinks">
+          <a
+            href="https://www.linkedin.com/in/dada-princess-63251123b/"
+            target="_blank"
+            style="color: #0e76a8; text-decoration: none">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/Princessdada"
+            target="_blank"
+            style="color: #333; text-decoration: none">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+        <!-- Current Location -->
+        <p class="text-style" data-testid="currentLocation">Lagos, Nigeria</p>
+
+        <!-- Current Time in UTC -->
+        <div
+          class="text-style"
+          id="current-time"
+          data-testid="currentTimeUTC"></div>
+      </div>
+    </div>
+
+    <script>
+      // Display current time in UTC
+      function updateTimeUTC() {
+        const now = new Date();
+        document.getElementById(
+          "current-time"
+        ).textContent = `Current UTC Time: ${now.toUTCString()}`;
+      }
+
+      updateTimeUTC();
+    </script>
+  </body>
+</html>
